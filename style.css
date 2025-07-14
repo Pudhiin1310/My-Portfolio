@@ -1,0 +1,327 @@
+/* Reset & basics */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* background-image: url('images\ \(1\).jfif'); */
+  background-color:whitesmoke;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: black;
+  line-height: 1.6;
+}
+
+/* Container spacing */
+.container {
+  margin-top: 20px;
+}
+
+/* Banner & header */
+.banner {
+  background-color: #343a40;
+  padding-left: 400px;
+  padding-right: 400px;
+  padding-bottom: 35px;
+  text-align: center;
+}
+
+.navbar {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.navbar-brand,
+.nav-link {
+  color: white !important;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.navbar-nav {
+  gap: 1rem;
+}
+
+.nav-link:hover {
+  color: white !important;
+}
+
+nav ul li a.nav-link {
+  transition: color 0.3s ease, background-color 0.3s ease;
+  padding: 5px 20px;
+  border-radius: 5px;
+}
+
+nav ul li a.nav-link:hover {
+  color: white;          
+  background-color: black; 
+  text-decoration: none;  
+  transform: scale(1.1);   
+}
+
+/* Header photo */
+.header-photo {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid white;
+}
+
+/* Navigation font size */
+nav ul {
+  font-size: 25px;
+}
+
+.resume-btn {
+  background-color: black; 
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: none;
+  margin-top: 20px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.resume-btn:hover {
+  background-color: white;
+  color: black; 
+  transform: scale(1.05);    
+}
+
+/* Section padding */
+section {
+  padding: 80px 0;
+}
+
+/* Section headings */
+section h2 {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: rgb(145, 42, 42);
+}
+
+/* Paragraph font size */
+p {
+  font-size: 23px;
+}
+
+/* Cards */
+.card {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  border-radius: 10px;
+}
+
+/* Project card title color */
+.project-card h5,
+.card h5 {
+  color: #ffc107;
+}
+
+/* Project card hover effect */
+.project-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 15px;
+  background-color: #343a40;
+  width: 25rem; 
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* Project description hover show */
+.project-card .full-description {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+  font-weight: normal;
+  font-size: 20px;
+}
+
+.project-card:hover .full-description {
+  max-height: 450px;
+  opacity: 1;
+}
+
+.project-card .short-text {
+  transition: opacity 0.3s ease;
+  font-weight: normal;
+}
+
+.project-card:hover .short-text {
+  opacity: 0;
+}
+
+/* Skill container styling */
+.skill-container {
+  background-color: #343a40;
+  color: white;
+  border-radius: 8px;
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  width: 300px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: height 0.4s ease, padding 0.4s ease;
+  position: relative;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.skill-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  transition: opacity 0.4s ease;
+}
+
+.skill-level {
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
+  right: 20px;
+  opacity: 0;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.skill-container:hover {
+  height: 100px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  justify-content: flex-start;
+}
+
+.skill-container:hover .skill-level {
+  opacity: 1;
+}
+
+.skill-container:hover .skill-name {
+  opacity: 1;
+}
+
+/* Education item */
+.edu-item {
+  position: relative;
+  padding: 10px 15px;
+  border: 2px solid #343a40;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  background-color: #343a40;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.edu-item:hover {
+  background-color: #343a40;
+  color: white;
+}
+
+.edu-marks {
+  display: none;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.edu-item:hover .edu-marks {
+  display: block;
+}
+
+/* Certificates cards */
+#certificates .card {
+  transition: transform 0.1s ease;
+  background-color: #343a40;
+}
+
+#certificates .card:hover {
+  transform: translateY(-5px);
+}
+
+/* Contact */
+#contact {
+  font-size: 20px;
+}
+
+#contact a {
+  color: blue;
+}
+
+.btn-primary{
+  background-color: black; 
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: none;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.btn-primary:hover {
+  background-color: white;
+  color: black; 
+  transform: scale(1.05);   
+}
+
+
+/* Footer */
+footer {
+  background-color: rgba(0, 0, 0, 0.85);
+  text-align: center;
+  padding: 10px;
+  font-size: 0.85rem;
+  color: #ccc;
+}
+
+/* Scroll to top button */
+#ScrollTopButton {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #343a40;
+  color: white;
+  border: none;
+  padding: 0.7em 1em;
+  font-size: 1.2rem;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: background 0.3s ease;
+}
+
+#ScrollTopButton:hover {
+  background-color: #ffc107;
+  color: black;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+
+  .header-photo {
+    width: 100px;
+    height: 100px;
+  }
+
+  .skill-bar .progress {
+    font-size: 0.8rem;
+  }
+}
